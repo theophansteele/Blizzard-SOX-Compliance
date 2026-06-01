@@ -844,6 +844,274 @@
     color: var(--text-dim);
   }
 
+  /* ── Framework Lineage Banner ── */
+  .lineage-note {
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 1.5rem;
+  }
+  .lineage-note strong { color: var(--accent); font-weight: 600; }
+
+  .lineage-banner {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .lineage-step {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.2rem 1.25rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+  }
+  .lineage-step:last-child { border-right: none; }
+
+  .lineage-step:nth-child(1) { background: rgba(0,229,255,0.03); }
+  .lineage-step:nth-child(3) { background: rgba(124,58,237,0.03); }
+  .lineage-step:nth-child(5) { background: rgba(245,158,11,0.03); }
+  .lineage-step:nth-child(7) { background: rgba(16,185,129,0.04); }
+
+  .lineage-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.1rem;
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    background: var(--surface2);
+    border-right: 1px solid var(--border);
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .lineage-layer-type {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    margin-bottom: 0.1rem;
+  }
+
+  .lineage-layer-name {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .lineage-layer-desc {
+    font-size: 0.68rem;
+    color: var(--text-mid);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .lineage-ref {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── ITGC Category Strip ── */
+  .itgc-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .itgc-cat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid;
+    border-radius: 0 4px 4px 0;
+    padding: 0.9rem 1rem;
+  }
+
+  .itgc-cat-name {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .itgc-cat-sox {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .itgc-cat-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .itgc-ctrl-tag {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    padding: 0.15rem 0.4rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    border-radius: 2px;
+  }
+
+  /* ── Enriched domain cards ── */
+  .domain-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid;
+    padding: 1rem 1.1rem;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .domain-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .domain-card-id {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .domain-itgc-badge {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .domain-card-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+
+  .domain-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .domain-meta-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .domain-meta-label {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    width: 52px;
+  }
+
+  .domain-meta-val {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--text-mid);
+    line-height: 1.4;
+  }
+
+  /* ── Enriched detail control cards ── */
+  .detail-control-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+  }
+
+  .detail-itgc-tag {
+    font-family: var(--mono);
+    font-size: 0.52rem;
+    padding: 0.1rem 0.4rem;
+    border: 1px solid;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .detail-sox-tag {
+    font-family: var(--mono);
+    font-size: 0.52rem;
+    padding: 0.1rem 0.4rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Comparison ITGC tags ── */
+  .cmp-itgc-tag {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    display: inline-block;
+  }
+
+  .cmp-sox-ref-tag {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    padding: 0.15rem 0.45rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .cmp-framework-tag {
+    font-family: var(--mono);
+    font-size: 0.52rem;
+    color: var(--text-dim);
+    opacity: 0.6;
+    display: inline-block;
+  }
+
   @media (max-width: 900px) {
     header { padding: 2rem 1.5rem; }
     .main { padding: 1.5rem; }
@@ -908,9 +1176,26 @@
 
 <main class="main">
 
-  <!-- SOX Domain Legend -->
+  <!-- Framework Lineage Banner -->
   <div class="section-header">
-    <span class="section-title">SOX ITGC Control Domains</span>
+    <span class="section-title">Regulatory & Framework Lineage</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="lineage-note">
+    The control numbers used in this project (CC6.x, CC7.x, CC8.x, A1.x, PI1.x) come from the <strong>AICPA SOC 2 Trust Services Criteria</strong> — not from SOX itself. SOX is a federal law that mandates ICFR assessment; the TSC numbering is the industry-standard operationalisation used to satisfy that requirement. The chain below shows the full lineage from law to implemented control.
+  </div>
+  <div class="lineage-banner" id="framework-lineage"></div>
+
+  <!-- ITGC Category Strip -->
+  <div class="section-header" style="margin-top:3rem">
+    <span class="section-title">SOX 404 ITGC Categories → SOC 2 TSC Mapping</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="itgc-strip" id="itgc-strip"></div>
+
+  <!-- SOX Domain Legend -->
+  <div class="section-header" style="margin-top:3rem">
+    <span class="section-title">SOC 2 TSC Control Domains (Used as SOX ITGC Implementation Layer)</span>
     <div class="section-line"></div>
   </div>
 
@@ -995,29 +1280,71 @@
 </footer>
 
 <script>
+// ── Full ITGC framework lineage ──────────────────────────────────────────────
+// SOX Section 404  →  PCAOB AS 2201  →  COSO 2013 ICF  →  SOC 2 TSC (AICPA)
+// The CC/A1/PI1 numbering comes from the AICPA SOC 2 Trust Services Criteria.
+// SOX itself is a law (not a control framework); auditors use SOC 2 TSC as the
+// operationalised ITGC layer to satisfy SOX 404 / PCAOB AS 2201 requirements.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const FRAMEWORK_LINEAGE = [
+  {
+    layer: "SOX Section 404",
+    type: "Federal Law",
+    description: "Requires management to assess and attest to the effectiveness of Internal Controls over Financial Reporting (ICFR). Does not prescribe specific control numbers.",
+    ref: "Sarbanes-Oxley Act, 2002 · 15 U.S.C. §7262"
+  },
+  {
+    layer: "PCAOB AS 2201",
+    type: "Auditing Standard",
+    description: "Defines how external auditors evaluate management's assessment of ICFR. Requires testing of IT General Controls (ITGCs) that support financial reporting processes.",
+    ref: "Public Company Accounting Oversight Board · AS 2201"
+  },
+  {
+    layer: "COSO 2013 ICF",
+    type: "Control Framework",
+    description: "Committee of Sponsoring Organizations Internal Control Framework. Provides 17 principles across 5 components. Principle 11 covers IT General Controls. Most widely accepted framework for SOX 404 compliance.",
+    ref: "COSO · Internal Control — Integrated Framework (2013)"
+  },
+  {
+    layer: "SOC 2 Trust Services Criteria",
+    type: "Implementation Standard",
+    description: "AICPA's operationalisation of COSO into numbered, auditable criteria. CC6–CC9 map directly to COSO Principle 11 (ITGC). This is the source of all CC6.x, CC7.x, CC8.x, A1.x, and PI1.x control numbers used in this project.",
+    ref: "AICPA · 2017 Trust Services Criteria (with 2022 points of focus)"
+  }
+];
+
+const ITGC_CATEGORIES = {
+  "Logical Access":    { controls:["CC6.1","CC6.2","CC6.3","CC6.6","CC6.7"], color:"#00e5ff", sox:"SOX 404 §3.3 — Access to programs and data" },
+  "Change Management": { controls:["CC8.1"], color:"#a78bfa", sox:"SOX 404 §3.4 — Program changes" },
+  "Computer Operations":{ controls:["CC7.1","CC7.2","CC7.3","CC9.1"], color:"#10b981", sox:"SOX 404 §3.2 — Computer operations" },
+  "Availability & DR":  { controls:["A1.1","A1.2"], color:"#f59e0b", sox:"SOX 404 §3.5 — Program development / continuity" },
+  "Processing Integrity":{ controls:["PI1.1"], color:"#ff6b35", sox:"SOX 802 — Record retention & data integrity" }
+};
+
 const DOMAINS = {
-  "CC6": "Logical and Physical Access Controls",
-  "CC7": "System Operations",
-  "CC8": "Change Management",
-  "CC9": "Risk Mitigation",
-  "A1":  "Availability",
-  "PI1": "Processing Integrity"
+  "CC6": { name:"Logical and Physical Access Controls", itgc:"Logical Access",     cosoPrinciple:"11 — Technology General Controls", sox404:"§3.3 Access to Programs & Data",   color:"#00e5ff" },
+  "CC7": { name:"System Operations",                   itgc:"Computer Operations", cosoPrinciple:"11 — Technology General Controls", sox404:"§3.2 Computer Operations",         color:"#10b981" },
+  "CC8": { name:"Change Management",                   itgc:"Change Management",   cosoPrinciple:"11 — Technology General Controls", sox404:"§3.4 Program Changes",             color:"#a78bfa" },
+  "CC9": { name:"Risk Mitigation",                     itgc:"Computer Operations", cosoPrinciple:"11 — Technology General Controls", sox404:"§3.2 Computer Operations",         color:"#64748b" },
+  "A1":  { name:"Availability",                        itgc:"Availability & DR",   cosoPrinciple:"11 + Supplemental Availability",  sox404:"§3.5 Program Development / DR",    color:"#f59e0b" },
+  "PI1": { name:"Processing Integrity",                itgc:"Processing Integrity",cosoPrinciple:"Supplemental Processing Integrity",sox404:"SOX 802 — Record Retention",       color:"#ff6b35" }
 };
 
 const CONTROLS = {
-  "CC6.1": "Logical access security architectures enforce access restrictions",
-  "CC6.2": "Credentials require registration and authorization (MFA)",
-  "CC6.3": "Access is modified or removed based on roles and responsibilities",
-  "CC6.6": "Encryption and boundary protections restrict external access",
-  "CC6.7": "Transmission and movement of data restricted to authorized users",
-  "CC7.1": "Monitoring tools detect anomalies and potential security events",
-  "CC7.2": "System components monitored for anomalies and malicious activity",
-  "CC7.3": "Security events evaluated for operational impact",
-  "CC8.1": "Changes authorized, tested, approved and implemented via change management",
-  "CC9.1": "Risk mitigation activities identified for business disruption risks",
-  "A1.1":  "Processing capacity maintained and evaluated to manage demand",
-  "A1.2":  "Backup processes and recovery infrastructure implemented",
-  "PI1.1": "Completeness, accuracy, timeliness of processing ensured"
+  "CC6.1": { text:"Logical access security architectures enforce access restrictions",             itgc:"Logical Access",     sox:"SOX 404 §3.3" },
+  "CC6.2": { text:"Credentials require registration and authorization (MFA)",                      itgc:"Logical Access",     sox:"SOX 404 §3.3" },
+  "CC6.3": { text:"Access is modified or removed based on roles and responsibilities",             itgc:"Logical Access",     sox:"SOX 404 §3.3" },
+  "CC6.6": { text:"Encryption and boundary protections restrict external access",                  itgc:"Logical Access",     sox:"SOX 404 §3.3" },
+  "CC6.7": { text:"Transmission and movement of data restricted to authorized users",              itgc:"Logical Access",     sox:"SOX 404 §3.3" },
+  "CC7.1": { text:"Monitoring tools detect anomalies and potential security events",               itgc:"Computer Operations",sox:"SOX 404 §3.2" },
+  "CC7.2": { text:"System components monitored for anomalies and malicious activity",              itgc:"Computer Operations",sox:"SOX 404 §3.2" },
+  "CC7.3": { text:"Security events evaluated for operational impact",                              itgc:"Computer Operations",sox:"SOX 404 §3.2" },
+  "CC8.1": { text:"Changes authorized, tested, approved and implemented via change management",    itgc:"Change Management",  sox:"SOX 404 §3.4" },
+  "CC9.1": { text:"Risk mitigation activities identified for business disruption risks",           itgc:"Computer Operations",sox:"SOX 404 §3.2" },
+  "A1.1":  { text:"Processing capacity maintained and evaluated to manage demand",                 itgc:"Availability & DR",  sox:"SOX 404 §3.5" },
+  "A1.2":  { text:"Backup processes and recovery infrastructure implemented",                      itgc:"Availability & DR",  sox:"SOX 404 §3.5" },
+  "PI1.1": { text:"Completeness, accuracy, timeliness of processing ensured",                      itgc:"Processing Integrity",sox:"SOX 802"      }
 };
 
 const SYSTEMS = [
@@ -1266,15 +1593,43 @@ const TF_FILES = [
   { file:"modules/confluence/main.tf",desc:"Space permission API calls, SSO policy enforcement, page template generation",                  controls:["CC6.1","CC6.2","CC6.3","CC8.1"] }
 ];
 
+// ── Build framework lineage banner
+const lineageBanner = document.getElementById('framework-lineage');
+lineageBanner.innerHTML = FRAMEWORK_LINEAGE.map((f, i) => `
+  <div class="lineage-step">
+    <div class="lineage-layer-type">${f.type}</div>
+    <div class="lineage-layer-name">${f.layer}</div>
+    <div class="lineage-layer-desc">${f.description}</div>
+    <div class="lineage-ref">${f.ref}</div>
+  </div>
+  ${i < FRAMEWORK_LINEAGE.length - 1 ? '<div class="lineage-arrow">▶</div>' : ''}
+`).join('');
+
+// ── Build ITGC category strip
+const itgcStrip = document.getElementById('itgc-strip');
+itgcStrip.innerHTML = Object.entries(ITGC_CATEGORIES).map(([name, data]) => `
+  <div class="itgc-cat-card" style="border-left-color:${data.color}">
+    <div class="itgc-cat-name" style="color:${data.color}">${name}</div>
+    <div class="itgc-cat-sox">${data.sox}</div>
+    <div class="itgc-cat-controls">${data.controls.map(c => `<span class="itgc-ctrl-tag">${c}</span>`).join('')}</div>
+  </div>
+`).join('');
+
 // ── Build domain legend
 const domainLegend = document.getElementById('domain-legend');
-Object.entries(DOMAINS).forEach(([id, name]) => {
-  domainLegend.innerHTML += `
-    <div class="domain-card">
-      <div class="domain-card-id">${id}</div>
-      <div class="domain-card-name">${name}</div>
-    </div>`;
-});
+domainLegend.innerHTML = Object.entries(DOMAINS).map(([id, d]) => `
+  <div class="domain-card" style="border-left-color:${d.color}">
+    <div class="domain-card-header">
+      <span class="domain-card-id" style="color:${d.color}">${id}</span>
+      <span class="domain-itgc-badge" style="border-color:${d.color}30;color:${d.color}">${d.itgc}</span>
+    </div>
+    <div class="domain-card-name">${d.name}</div>
+    <div class="domain-card-meta">
+      <div class="domain-meta-row"><span class="domain-meta-label">COSO</span><span class="domain-meta-val">Principle ${d.cosoPrinciple}</span></div>
+      <div class="domain-meta-row"><span class="domain-meta-label">SOX 404</span><span class="domain-meta-val">${d.sox404}</span></div>
+      <div class="domain-meta-row"><span class="domain-meta-label">Source</span><span class="domain-meta-val">AICPA SOC 2 TSC</span></div>
+    </div>
+  </div>`).join('');
 
 // ── Build filter buttons
 const categories = [...new Set(SYSTEMS.map(s => s.category))];
@@ -1311,15 +1666,28 @@ function systemInitial(name) {
 // ── Build systems list
 const systemsList = document.getElementById('systems-list');
 SYSTEMS.forEach(sys => {
-  const pillsHtml = sys.controls.map(c =>
-    `<span class="control-pill">${c}</span>`).join('');
+  const pillsHtml = sys.controls.map(c => {
+    const ctrl = CONTROLS[c] || {};
+    const domain = c.replace(/\.\d+$/,'');
+    const domainColor = DOMAINS[domain] ? DOMAINS[domain].color : '#64748b';
+    return `<span class="control-pill" style="border-color:${domainColor}30;color:${domainColor};background:${domainColor}08" title="${ctrl.text||''} · ITGC: ${ctrl.itgc||''} · ${ctrl.sox||''}">${c}</span>`;
+  }).join('');
 
-  const detailHtml = sys.controls.map(c => `
-    <div class="detail-control">
-      <div class="detail-control-id">${c}</div>
-      <div class="detail-control-name">${CONTROLS[c] || ''}</div>
+  const detailHtml = sys.controls.map(c => {
+    const ctrl = CONTROLS[c] || {};
+    const domain = c.replace(/\.\d+$/,'');
+    const domainColor = DOMAINS[domain] ? DOMAINS[domain].color : '#64748b';
+    return `
+    <div class="detail-control" style="border-color:${domainColor}20">
+      <div class="detail-control-header">
+        <div class="detail-control-id" style="color:${domainColor}">${c}</div>
+        <span class="detail-itgc-tag" style="color:${domainColor};border-color:${domainColor}30">${ctrl.itgc||''}</span>
+        <span class="detail-sox-tag">${ctrl.sox||''}</span>
+      </div>
+      <div class="detail-control-name">${ctrl.text||''}</div>
       <div class="detail-control-impl">${sys.impl[c] || ''}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
   const tfBadge = sys.tfModule
     ? `<div class="terraform-badge"><span class="tf-dot"></span>${sys.tfModule}/main.tf</div>`
@@ -1755,11 +2123,20 @@ EVIDENCE_COMPARISON.forEach(item => {
   const newBenefits = item.new.benefits.map(b =>
     `<div class="new-benefit">${b}</div>`).join('');
 
+  const ctrl = CONTROLS[item.control] || {};
+  const domain = item.control.replace(/\.\d+$/, '');
+  const domainColor = DOMAINS[domain] ? DOMAINS[domain].color : '#64748b';
+
   compRows.innerHTML += `
     <div class="cmp-row" data-domain="${item.domain}">
-      <div class="cmp-ctrl-cell">
-        <div class="cmp-ctrl-id">${item.control}</div>
+      <div class="cmp-ctrl-cell" style="border-right-color:${domainColor}30">
+        <div class="cmp-ctrl-id" style="color:${domainColor}">${item.control}</div>
         <div class="cmp-ctrl-name">${item.controlName}</div>
+        <div style="margin-top:0.5rem;display:flex;flex-direction:column;gap:0.25rem">
+          <span class="cmp-itgc-tag" style="color:${domainColor};border-color:${domainColor}30">${ctrl.itgc||item.domain}</span>
+          <span class="cmp-sox-ref-tag">${ctrl.sox||''}</span>
+          <span class="cmp-framework-tag">SOC 2 TSC / AICPA</span>
+        </div>
       </div>
       <div class="cmp-old-cell">
         <div class="old-request-label">📋 Evidence Request</div>
